@@ -1,0 +1,360 @@
+//project.jsx
+
+import React from 'react';
+import "./Project.css";
+// import { Children } from 'react';
+
+const Project = ({onSubmit, onCancel, onClose}) => {
+  return (
+    <div className='project-box'>
+      <div className='project'>
+
+        <div className='project-header'>
+          <div className='header-text'>
+            <h1>Add a new Bed / Machine</h1>
+            <h4>Please add the Machine information</h4>
+          </div>
+          <div className="close" onClick={() => onClose()}>&times;</div>
+        </div>
+        
+        <div className='project-content'>
+          <h3>Machine informations</h3>
+            <form>
+            <div className='form'>
+            <div className="row1">
+              <label className='row1st'> Machine name </label>
+              <br/>
+              <input className="box1"
+              type='text'
+              /> 
+              <br/>
+            </div>
+
+            <div className="row2">
+              <label className='row2nd'> Serial Number </label>
+              <br/>
+              <input className="box2"
+              type='text'
+              />  
+              <br/>
+            </div>
+
+            <div className="row3">
+              <label className='row3rd'> Base Station </label>
+              <br/>
+              <input className="box3"
+              type='text'
+              /> 
+              <br/>
+            </div>
+            </div>
+          </form>
+        </div>
+
+        <div className='project-footer'>
+          <button className='btn btn-submit' onClick={()=>onSubmit()}><p className='confirm'>Confirm</p></button>
+          <button className='btn btn-cancel' onClick={()=>onCancel()}><p className="cancel">Cancel</p></button>
+        </div>
+
+      </div>
+    </div>
+  );
+};
+
+export default Project;
+
+//project.css
+
+.project-box {
+    position:fixed;
+    left:84px;
+    top:130px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* background-color: rgba(0, 0, 0, 0.5); */
+    width: 700px;
+    height: 284px;
+    border: 1px solid black;
+
+}
+
+.project{
+    width: 30em;
+    width: 700px;
+    height: 284px;
+    border-radius: 4px;
+    z-index:1;
+}
+
+
+
+.btn-submit{
+    background: #0065FF;
+    height: Fixed (36px);
+    top: 14px;
+    left: 585px;
+    padding: 8px 16px 8px 16px;
+    border-radius: 4px;
+    gap: 16px;
+    width: Hug (91px);
+}
+
+.btn-cancel{
+    background: white;
+    width: 90px;
+    height: 36px;
+    top: 16px;
+    left: 477px;
+    border-radius: 4px;
+}
+
+
+.project-header{
+    /* display:flex;
+    justify-content: flex-end;
+    font-size: 2 rem; */
+    Width:700px;
+    Height:84px;
+    Left:1px;
+    padding: 16px 24px 12px 24px;
+
+}
+
+.project-content{
+    height: 117px;
+    top: 92px;
+    left: 24px;
+    width: 652px;
+    margin-bottom: 2rem;
+}
+
+.project-footer{
+    display: flex;
+    justify-content: space-evenly;
+    width: 700px;
+    top: 216px;
+    height: 68px;
+   
+}
+
+.inside-header{
+    width: 368px;  
+    height: 56px;
+    top: 16px;
+    left: 24px;
+}
+
+.row1{
+    /* float: left; */
+   
+    width: 250px;
+    top: 132px;
+    left: 24px;
+    height: 76px;
+    flex-grow: 1;
+    padding-left: 25px;
+}
+.row2{
+    height: 76px;
+    top: 132px;
+    left: 290px;
+    width: 185px;
+    /* margin-left: 5.5cm; */
+    flex-grow: 1;
+    padding-left: 38px;
+}
+.row3{
+    height: 76px;
+    top: 133px;
+    left: 491px;
+    width: 185px;
+    /* margin-left: 11cm; */
+    /* margin-top: -1cm; */
+    flex-grow: 1;
+    padding-left: 50px;
+}
+
+h1{
+    font:inherit;
+    width: 368px;
+    height: 36px;
+    top: 16px;
+    left: 24px;
+    font-family: Rubik Medium;
+    font-size: 28px;
+    font-weight: 500;
+    line-height: 36px;
+    letter-spacing: 0px;
+    text-align: left;
+    
+
+}
+
+h4{
+    width: 368px;
+    height: 22px;
+    top: 50px;
+    left: 24px;
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 22px;
+    letter-spacing: 0px;
+    text-align: left;
+    font-family: Rubik;
+}
+
+.close{
+    cursor: pointer;
+    position: absolute;
+    top: 7%;
+    right: 4%;
+    transform: translateY(-100%);
+    font-size: 25px;
+}
+
+h3{
+    width: 440px;
+    top: 92px;
+    left: 24px;
+    height: 24px;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 24px;
+    letter-spacing: 0px;
+    text-align: left;
+    font-family: Rubik;
+    padding-left: 23px;
+}
+
+.row1st{
+    height: 12px;
+    width: 81px;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 12px;
+    letter-spacing: 0px;
+    text-align: left;
+    font-family: Rubik;
+}
+
+.row2nd{
+    width: 78px;
+    height: 12px;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 12px;
+    letter-spacing: 0px;
+    text-align: left;
+    font-family: Rubik;
+
+}
+
+.row3rd{
+    width: 70px;
+    height: 12px;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 12px;
+    letter-spacing: 0px;
+    text-align: left;
+    font-family: Rubik;
+}
+.box1{
+    width: 250px;
+    top: 20px;
+    height: 36px;
+
+}
+.box2{
+    width: 185px;
+    height: 36px;
+    top: 20px;
+    
+}
+.box3{
+    width: 185px;
+    height: 36px;
+    top: 20px;
+}
+.confirm{
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 20px;
+    letter-spacing: 0px;
+    text-align: center;
+    font-family: Rubik;
+}
+.cancel{
+    height: 20px;
+    top: 8px;
+    left: 16px;
+    width: 58px;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 20px;
+    letter-spacing: 0px;
+    text-align: center;
+    font-family: Rubik;
+}
+
+.form{
+    display: flex;
+    flex-direction: row;
+    max-width: 400px;
+}
+
+//App.jsx
+
+import { useState } from "react";
+import "./App.css"
+import Project from "./components/Project";
+
+function App() {
+  const [projectOpen, setProjectOpen] = useState(false);
+
+  const handleButtonClick = () => {
+    setProjectOpen(false);
+    
+  };
+  return (
+    <div className="App">
+    
+    <button className="btn btn-open" onClick={() => setProjectOpen(true)}>
+      Open
+    </button>
+      {projectOpen && (
+        <Project onSubmit={handleButtonClick} onCancel={handleButtonClick} onClose={handleButtonClick} />
+      )}
+    </div>
+  );
+}
+
+export default App;
+
+//App.css
+
+.App {
+    background-color: #fefefe;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    padding-bottom: 2rem;
+}
+
+.btn{
+    border: none;
+    color: #fff;
+    padding: 0,5rem 1.5rem;
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: 0px 5px 5px #ccc;
+    font-size: 1rem;
+}
+
+.btn-open{
+    background-color: #1d4;
+}
+
